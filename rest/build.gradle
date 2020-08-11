@@ -1,0 +1,24 @@
+apply plugin: 'application'
+
+mainClassName = 'melon.Application'
+
+dependencies {
+    implementation project(':api')
+
+    annotationProcessor 'io.jooby:jooby-apt:2.8.4'
+    implementation 'io.jooby:jooby-utow:2.8.4'
+    implementation 'io.jooby:jooby-jackson:2.8.4'
+    implementation 'io.jooby:jooby-banner:2.8.4'
+
+    // Mongodb
+    implementation 'org.mongodb:bson:4.0.3'
+
+    // jwt
+    implementation 'com.auth0:java-jwt:3.10.3'
+
+    // test
+    testImplementation 'io.jooby:jooby-test:2.8.4'
+
+    //excel
+    implementation 'org.apache.poi:poi:4.1.2'
+}
