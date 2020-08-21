@@ -28,7 +28,7 @@ public class Application extends Jooby {
             ctx.setResponseHeader("foo", "bar");
         });
 
-        get("/", ctx -> "decorator");
+        get("/hello", ctx -> "decorator");
     }
 
     public static void main(String[] args) {
