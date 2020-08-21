@@ -19,14 +19,14 @@ public class Application extends Jooby {
             return response;
         });
 
-        before(ctx -> {
-           ctx.setResponseHeader("Server", "Jooby");
-        });
-
-        after((ctx, result, failure) -> {
-            System.out.println(result);
-            ctx.setResponseHeader("foo", "bar");
-        });
+//        before(ctx -> {
+//           ctx.setResponseHeader("Server", "Jooby");
+//        });
+//
+//        after((ctx, result, failure) -> {
+//            System.out.println(result);
+//            ctx.setResponseHeader("foo", "bar");
+//        });
 
         get("/", ctx -> "decorator");
     }
